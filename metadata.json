@@ -1,0 +1,8 @@
+{
+  "name": "Antima",
+  "description": "A compassionate AI-powered after-loss assistance platform for Indian families, providing ritual guidance, smart communication, and marketplace services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "religionPreference": { "type": "string" },
+        "regionPreference": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["displayName", "email", "createdAt"]
+    },
+    "DeceasedRecord": {
+      "title": "Deceased Record",
+      "description": "Information about the deceased and ceremonies",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string" },
+        "deceasedName": { "type": "string" },
+        "dateOfPassing": { "type": "string" },
+        "religion": { "type": "string" },
+        "status": { "type": "string", "enum": ["active", "completed"] },
+        "ceremonyInfo": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string" },
+            "date": { "type": "string" },
+            "time": { "type": "string" },
+            "venue": { "type": "string" }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "deceasedName", "createdAt"]
+    },
+    "Contact": {
+      "title": "Contact",
+      "description": "A contact for notifications",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "group": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "name", "createdAt"]
+    },
+    "NotificationLog": {
+      "title": "Notification Log",
+      "description": "History of sent notifications",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string" },
+        "message": { "type": "string" },
+        "channels": { "type": "array", "items": { "type": "string" } },
+        "contacts": { "type": "array", "items": { "type": "string" } },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "message", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Storage for user profiles"
+    },
+    "/records/{recordId}": {
+      "schema": "DeceasedRecord",
+      "description": "Storage for deceased records and ceremony arrangements"
+    },
+    "/contacts/{contactId}": {
+      "schema": "Contact",
+      "description": "Storage for user contacts"
+    },
+    "/notification_logs/{logId}": {
+      "schema": "NotificationLog",
+      "description": "Storage for notification history"
+    }
+  }
+}
