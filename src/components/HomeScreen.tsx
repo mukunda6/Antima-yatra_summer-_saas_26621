@@ -226,7 +226,7 @@ export const HomeScreen: React.FC<{ setScreen: (s: string) => void }> = ({ setSc
                <div className="relative w-full max-w-md aspect-square flex items-center justify-center">
                   <div className="absolute inset-0 bg-blue-50 blur-[100px] opacity-40 rounded-full"></div>
                   <img 
-                    src="/src/assets/images/regenerated_image_1779057677370.jpg" 
+                    src="/assets/images/regenerated_image_1779057677370.jpg" 
                     alt="Antima Compassionate Support" 
                     className="relative z-10 w-full object-contain rounded-3xl"
                     referrerPolicy="no-referrer"
@@ -269,7 +269,7 @@ export const HomeScreen: React.FC<{ setScreen: (s: string) => void }> = ({ setSc
                 <div className="relative">
                    <div className="w-14 h-14 flex items-center justify-center overflow-hidden border-2 border-primary/20 rounded-full">
                       <img 
-                        src="/src/assets/images/regenerated_image_1779057677370.jpg" 
+                        src="/assets/images/regenerated_image_1779057677370.jpg" 
                         alt="Antima Ritual Agent" 
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"

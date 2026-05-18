@@ -71,7 +71,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onBack }) => {
           <div className="flex-1 flex items-center justify-center">
              <div className="relative w-full max-w-sm aspect-square flex items-center justify-center">
                 <img 
-                  src="/src/assets/images/regenerated_image_1779057677370.jpg" 
+                  src="/assets/images/regenerated_image_1779057677370.jpg" 
                   alt="Antima Compassionate Support" 
                   className="w-full h-full object-contain rounded-2xl"
                   referrerPolicy="no-referrer"

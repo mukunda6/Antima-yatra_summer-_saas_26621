@@ -76,7 +76,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           >
             <div className="relative z-10 w-full max-w-xl aspect-[4/3] flex items-center justify-center">
                 <img 
-                  src="/src/assets/images/regenerated_image_1779057677370.jpg" 
+                  src="/assets/images/regenerated_image_1779057677370.jpg" 
                   alt="Antima Compassionate Support" 
                   className="w-full h-full object-contain rounded-2xl"
                   referrerPolicy="no-referrer"
